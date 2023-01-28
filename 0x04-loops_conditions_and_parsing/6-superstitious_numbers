@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
+#Print Best school unless
+#i == 4 print 4 print bad luck from China
+#i == 9 print 9 bad luck from Japan
+#i == 17 print 17 bad luck from Italy
 i=1
 while [ $i -le 20 ]
 do

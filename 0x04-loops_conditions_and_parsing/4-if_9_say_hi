@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#Print Best school 10 times and then Hi if at the 9th count
 i=1
 while [ $i -le 10 ]
 do
