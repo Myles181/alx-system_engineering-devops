@@ -11,6 +11,6 @@ while [ $hour -le 12 ]; do
 		min=$(($min + 1))
 		echo $min
 	done
-	hour=$(($hour + 1))
+	hour=$((hour + 1))
 	min=0
 done

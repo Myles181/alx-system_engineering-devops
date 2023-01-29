@@ -10,5 +10,5 @@ do
 		echo -e "Best School\nHi"
 		#We could have still used: echo "Best School$'\n'Hi"
 	fi
-	i=$(( $i + 1))
+	i=$((i + 1))
 done
