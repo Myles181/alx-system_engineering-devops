@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#Kill ./7-highlander and display "Killed"
+
+pkill -f -SIGKILL 7-highlander
