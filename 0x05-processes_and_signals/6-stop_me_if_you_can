@@ -2,4 +2,4 @@
 #Terminate ./4-to_infinity_and_beyond
 #Using pkill
 
-pkill -f ./4-to_infinity_and_beyond
+pkill -f -SIGTERM ./4-to_infinity_and_beyond
