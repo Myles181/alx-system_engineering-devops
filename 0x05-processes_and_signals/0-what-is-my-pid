@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 #Print pid
 
-pid=$$
-echo "$pid"
+echo $$
