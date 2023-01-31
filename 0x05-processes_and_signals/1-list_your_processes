@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Print out all processes in the system
+# a - shows all the information about the all User
+# u - Displays all User oriented format like:
+# User that owns the processes, Memory usage and CPU usage
+# x and f - prints it out in a hierarchical structure or forest structure
+ps auxf
