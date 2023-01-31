@@ -3,4 +3,4 @@
 # The process name is "bash"
 # pgrep - displays all pid of a process name
 
-pgrep -aux -l
+pgrep bash -l
