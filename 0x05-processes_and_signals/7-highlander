@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#Displays "To infinity and beyond" indefinitely
+#sleep 2seconds after every iteration
+#Display "I am invincible!!!" when a SIGTERM is received
+
+while true; do
+	echo "To infinity and beyond"
+	sleep 2
+	trap 'echo "I am invincible!!!";exit' SIGTERM
+done

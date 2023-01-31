@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#Terminate ./7-highlander
+#Using pkill
+
+pkill -f -SIGTERM ./7-highlander
