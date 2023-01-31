@@ -9,7 +9,7 @@ while true; do
 	echo "To infinity and beyond"
 
 	#Displays I hate the kill command when receiving a SIGTERM signal
-	trap 'echo "I hate the kill"' SIGTERM
+	trap 'echo "I hate the kill"; exit' SIGTERM
 
 	#Displays Y U no love me?! when receiving a SIGINT signal
 	trap 'echo "Y U no love me?!"' SIGINT
