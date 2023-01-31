@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#Must terminate program
+#Using kill to terminate program instead of ctrl+c
+
+kill "$(pgrep -f ./4-to_infinity_and_beyond)"
