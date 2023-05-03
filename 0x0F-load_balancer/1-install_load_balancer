@@ -11,7 +11,7 @@ frontend web
 
 backend web_servers
 	balance roundrobin
-        server server1 52.3.251.35
-        server server2 34.204.95.177
+        server web-01 3.85.1.209
+        server web-02 54.90.14.64
 " | sudo tee -a /etc/haproxy/haproxy.cfg
 sudo service haproxy restart
