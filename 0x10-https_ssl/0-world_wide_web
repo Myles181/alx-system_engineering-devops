@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# Displays information about a domain's subdomain
+
+# "domain" is first argument and "subdomain" is second argument
+
+# domain_check - This function will be used when only domain is passed
+function domain_check {
+	domain_names=("www" "lb-01" "web-01" "web-02")
+
+	for i in "${domain_names[@]}"; do
+		dig "${i}"."${1}" | grep -A1 "ANSWER SECTION:" | \
+			awk 'FNR == 2 {printf "The subdomain %s is a %s record and points to %s", var, $4, $5}' var="$i"
+	done
+}
+
+# subdomain_check - This function will be used when both domain and subdomain is passed
+function subdomain_check {
+	dig "$2"."$1" | grep -A1 "ANSWER SECTION:" | \
+		awk 'FNR == 2 {printf "The subdomain %s is a %s record and points to %s", $2, $4, $5}'
+}
+
+# Check arguments passed in
+if [ $# -lt 1 ]; then
+	echo "Provide domain name\n"
+elif [ $# -eq 1 ]; then
+	domain_check $1;
+else
+	subdomain_check $1 $2;
+fi
