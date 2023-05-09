@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-# This script executes a command as another user. The user is passed as an argument
-
-user="$1"
-sudo -u "$user" whoami
