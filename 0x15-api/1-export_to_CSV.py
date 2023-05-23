@@ -15,7 +15,7 @@ if __name__ == "__main__":
     todos = re.get(url + "todos", params={"userId": employee_id}).json()
 
     # Write data into 2.csv
-    with open("2.csv", "a") as f:
+    with open("2.csv", "w") as f:
         writer = csv.writer(f)
         for todo in todos:
             writer.writerow((employee_id, employee_name, todo["completed"], todo["title"]))
