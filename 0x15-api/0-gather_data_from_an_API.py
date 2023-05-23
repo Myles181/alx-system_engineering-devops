@@ -10,7 +10,7 @@ if __name__ == "__main__":
     url = "https://jsonplaceholder.typicode.com/"
     
     # Fetch Employees_Name, Todos
-    employee_name = re.get(url + "users/" + employee_id).json()["name"]
+    employee_name = re.get(url + "users/" + employee_id).json()["username"]
     todos = re.get(url + "todos", params={"userId": employee_id}).json()
 
     num_of_total = 0
