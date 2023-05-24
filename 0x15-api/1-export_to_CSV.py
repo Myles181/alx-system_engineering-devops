@@ -16,7 +16,7 @@ if __name__ == "__main__":
 
     # Write data into 2.csv
     with open("2.csv", "w") as f:
-        writer = csv.writer(f)
+        writer = csv.writer(f, quoting=csv.QUOTE_ALL)
         for todo in todos:
-            writer.writerow((employee_id, employee_name, todo["completed"], todo["title"]))
+            writer.writerow([employee_id, employee_name, todo["completed"], todo["title"]])
 
