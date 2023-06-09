@@ -6,7 +6,11 @@ Funtion to query subscribers of reddit
 """
 
 def number_of_subscribers(subreddit):
-
+    """
+    nummber_of_subscribers - To get the number of subscription in a subreddit
+    Args:
+        subreddit(str) - A subreddit
+    """
     if subreddit is None or isinstance(subreddit, str) is False:
         return 0
 
